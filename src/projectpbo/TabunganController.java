@@ -125,7 +125,8 @@ public class TabunganController {
                 }
 
                 c.setAutoCommit(false);
-                c.prepareStatement("INSERT INTO transaksi (saldo_id,tipe,jumlah,ket) VALUES (" + Session.accountId + ",'TABUNGAN'," + j + ",'" + ketField.getText() + "')").executeUpdate();
+                c.prepareStatement("INSERT INTO transaksi (saldo_id,tipe,jumlah,ket) VALUES (" + Session.accountId + ",'TABUNGAN'," + 
+                        j + ",'" + ketField.getText() + "')").executeUpdate();
                 c.prepareStatement("UPDATE saldo SET saldo = saldo - " + j + " WHERE id=" + Session.accountId).executeUpdate();
                 c.commit();
             }
