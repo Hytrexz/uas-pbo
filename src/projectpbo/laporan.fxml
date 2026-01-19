@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projectpbo.LaporanController">
+   <children>
+      <VBox layoutX="37.0" layoutY="31.0" prefHeight="342.0" prefWidth="526.0" spacing="10.0">
+         <children>
+            <HBox>
+               <children>
+                  <Label onMouseClicked="#back" prefHeight="34.0" prefWidth="34.0" text="←">
+                     <font>
+                        <Font name="Elephant" size="25.0" />
+                     </font>
+                  </Label>
+                  <Label text="LAPORAN KEUANGAN">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets top="1.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="286.0" prefWidth="526.0" spacing="5.0">
+               <children>
+                  <VBox alignment="CENTER_LEFT" prefHeight="268.0" prefWidth="173.0">
+                     <children>
+                        <Label fx:id="lblSaldo" prefHeight="18.0" prefWidth="110.0" text="Saldo : Rp 0" />
+                        <Label fx:id="lblTotalPemasukan" prefHeight="18.0" prefWidth="186.0" text="Total Pemasukan : Rp 0" />
+                        <Label fx:id="lblTotalPengeluaran" prefHeight="18.0" prefWidth="210.0" text="Total Pengeluaran : Rp 0" />
+                        <Label fx:id="lblTotalTabungan" prefHeight="18.0" prefWidth="210.0" text="Total Tabungan : Rp 0" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" spacing="10.0">
+                     <children>
+                        <HBox alignment="CENTER" spacing="10.0">
+                           <children>
+                              <Button fx:id="btnPemasukan" mnemonicParsing="false" onAction="#pemasukan" prefHeight="26.0" prefWidth="90.0" text="Pemasukan" />
+                              <Button fx:id="btnPengeluaran" mnemonicParsing="false" onAction="#pengeluaran" prefHeight="26.0" prefWidth="90.0" text="Pengeluaran" />
+                              <Button fx:id="btnTabungan" mnemonicParsing="false" onAction="#tabungan" prefHeight="26.0" prefWidth="90.0" text="Tabungan" />
+                           </children>
+                        </HBox>
+                        <TableView fx:id="table" prefHeight="234.0" prefWidth="373.0">
+                          <columns>
+                            <TableColumn fx:id="colNo" prefWidth="31.19995081424713" text="No" />
+                            <TableColumn fx:id="colJumlah" prefWidth="111.9999942779541" text="Jumlah" />
+                            <TableColumn fx:id="colKet" prefWidth="107.199951171875" text="Keterangan" />
+                            <TableColumn fx:id="colWaktu" minWidth="0.0" prefWidth="97.60001831054689" text="Waktu" />
+                          </columns>
+                        </TableView>
+                        <Button mnemonicParsing="false" onAction="#downloadPDF" text="Download PDF" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Label fx:id="lblError" layoutX="346.0" layoutY="364.0" textFill="RED" />
+   </children>
+</AnchorPane>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="rootPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="projectpbo.MenuController">
+   <children>
+      <VBox alignment="CENTER" layoutY="48.0" prefHeight="303.0" prefWidth="600.0" spacing="15.0">
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="SISTEM MANAJEMEN KEUANGAN" textAlignment="JUSTIFY" wrappingWidth="322.4730224609375">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Text>
+            <Label fx:id="lblSaldo" text="Saldo : Rp0" />
+            <Button mnemonicParsing="false" onAction="#pemasukan" prefHeight="35.0" prefWidth="130.0" text="Pemasukan" />
+            <Button mnemonicParsing="false" onAction="#pengeluaran" prefHeight="35.0" prefWidth="130.0" text="Pengeluaran" />
+            <Button mnemonicParsing="false" onAction="#tabungan" prefHeight="35.0" prefWidth="130.0" text="Tabungan" />
+            <Button mnemonicParsing="false" onAction="#laporan" prefHeight="35.0" prefWidth="130.0" text="Laporan" />
+            <Button mnemonicParsing="false" onAction="#keluar" prefHeight="25.0" prefWidth="64.0" text="Keluar" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

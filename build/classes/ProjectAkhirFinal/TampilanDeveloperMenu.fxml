@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" spacing="15.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ProjectAkhirFinal.MenuDeveloper">
+   <children>
+      <Label text="Menu Developer" textFill="#9c27b0">
+         <font>
+            <Font name="System Bold" size="22.0" />
+         </font>
+      </Label>
+      <VBox spacing="10.0">
+         <children>
+            <Label text="Informasi Memori">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="infoMemori" editable="false" prefHeight="306.0" prefWidth="560.0" promptText="Tekan &quot; Tampilkan Memori &quot; Untuk Melihat Informasi" />
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#kotakInfoMemori" prefWidth="200.0" style="-fx-background-color: #2196F3; -fx-text-fill: white;" text="Tampilkan Memori">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <VBox spacing="10.0">
+         <children>
+            <Label text="Runtime Information">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <TextArea fx:id="infoRuntime" editable="false" prefHeight="80.0" prefWidth="560.0" />
+         </children>
+      </VBox>
+      <HBox alignment="CENTER" prefHeight="50.0" prefWidth="560.0" spacing="10.0">
+         <children>
+            <Button alignment="CENTER" mnemonicParsing="false" onAction="#menuUtama" prefWidth="150.0" style="-fx-background-color: #607D8B; -fx-text-fill: white;" text="Keluar">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>
