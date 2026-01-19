@@ -119,7 +119,8 @@ public class PemasukanController {
             
             try (Connection c = Database.getConnection()) {
                 c.setAutoCommit(false);
-                c.prepareStatement("INSERT INTO transaksi (saldo_id,tipe,jumlah,ket) VALUES (" + Session.accountId + ",'PEMASUKAN'," + j + ",'" + ketField.getText() + "')" ).executeUpdate();
+                c.prepareStatement("INSERT INTO transaksi (saldo_id,tipe,jumlah,ket) VALUES (" + 
+                        Session.accountId + ",'PEMASUKAN'," + j + ",'" + ketField.getText() + "')" ).executeUpdate();
                 c.prepareStatement("UPDATE saldo SET saldo = saldo + " + j + " WHERE id=" + Session.accountId).executeUpdate();
                 c.commit();
             }
